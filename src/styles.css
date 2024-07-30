@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+@layer components {
+  .banda {
+    @apply relative before:content-image-before before:absolute before:top-20 before:-z-10 before:-left-3 after:content-image-after after:absolute after:bottom-20 after:right-5;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
