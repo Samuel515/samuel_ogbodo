@@ -4,6 +4,9 @@
   .banda {
     @apply relative before:content-image-before before:absolute before:top-20 before:-z-10 before:-left-3 after:content-image-after after:absolute after:bottom-20 after:right-5;
   }
+  .about-me{
+    @apply border-b-2 border-primary relative before:content-image-after before:absolute before:top-14 before:left-0 before:-z-10 after:content-second-image-after after:absolute after:bottom-40 after:right-5;
+  }
 }
 
 @tailwind base;

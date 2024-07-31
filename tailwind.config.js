@@ -14,6 +14,7 @@ module.exports = {
       content: {
         'image-before': 'url("../assets/bg.svg")',
         'image-after': 'url("../assets/dots.svg")',
+        'second-image-after': 'url("../assets/slant-dots.svg")',
       },
     },
   },
