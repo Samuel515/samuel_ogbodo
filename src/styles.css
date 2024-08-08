@@ -1,12 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
+/* @font-face {
+  font-family: fira code;
+  src: url("../fonts/FiraCode-Regular.ttf");
+} */
+
 @layer components {
   .banda {
     @apply relative before:content-image-before before:absolute before:top-20 before:-z-10 before:-left-3 after:content-image-after after:absolute after:bottom-20 after:right-5;
   }
-  .about-me{
+
+  .about-me {
     @apply border-b-2 border-primary relative before:content-image-after before:absolute before:top-14 before:left-0 before:-z-10 after:content-second-image-after after:absolute after:bottom-40 after:right-5;
   }
+
+  .live{
+    @apply py-[5px] px-5 border border-primary inline-flex justify-center items-center mt-5;
+  }
+
+  .cached{
+    @apply py-[5px] px-5 border border-gray inline-flex justify-center items-center mt-5 text-gray;
+  }
+}
+
+@keyframes rotate-cw{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-acw{
+  from{
+    transform: rotate(360deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+}
+
+.rotate-cw{
+  animation: rotate-cw 10s linear infinite;
+}
+
+.rotate-acw{
+  animation: rotate-acw 10s linear infinite;
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.appearance{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
 }
 
 @tailwind base;

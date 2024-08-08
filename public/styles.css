@@ -1,8 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
-/*
-! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
-*/
+/* @font-face {
+  font-family: fira code;
+  src: url("../fonts/FiraCode-Regular.ttf");
+} */
+
+@keyframes rotate-cw{
+  from{
+    transform: rotate(0deg);
+  }
+
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-acw{
+  from{
+    transform: rotate(360deg);
+  }
+
+  to{
+    transform: rotate(0deg);
+  }
+}
+
+.rotate-cw{
+  animation: rotate-cw 10s linear infinite;
+}
+
+.rotate-acw{
+  animation: rotate-acw 10s linear infinite;
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.appearance{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+/* ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -601,6 +650,36 @@ video {
   content: var(--tw-content);
 }
 
+.live{
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 128 0 / var(--tw-border-opacity));
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.cached{
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(171 178 191 / var(--tw-border-opacity));
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(171 178 191 / var(--tw-text-opacity));
+}
+
 .fixed{
   position: fixed;
 }
@@ -629,12 +708,28 @@ video {
   left: -14rem;
 }
 
+.-left-60{
+  left: -15rem;
+}
+
+.-left-64{
+  left: -16rem;
+}
+
+.-left-\[265px\]{
+  left: -265px;
+}
+
 .-right-56{
   right: -14rem;
 }
 
 .-right-\[0\.5px\]{
   right: -0.5px;
+}
+
+.-right-\[14rem\]{
+  right: -14rem;
 }
 
 .-top-5{
@@ -661,12 +756,20 @@ video {
   left: 2.5rem;
 }
 
+.left-12{
+  left: 3rem;
+}
+
 .left-2{
   left: 0.5rem;
 }
 
 .left-5{
   left: 1.25rem;
+}
+
+.left-52{
+  left: 13rem;
 }
 
 .right-0{
@@ -685,8 +788,16 @@ video {
   right: 9rem;
 }
 
+.right-40{
+  right: 10rem;
+}
+
 .top-0{
   top: 0px;
+}
+
+.top-10{
+  top: 2.5rem;
 }
 
 .top-12{
@@ -701,36 +812,28 @@ video {
   top: 1rem;
 }
 
+.top-40{
+  top: 10rem;
+}
+
 .top-52{
   top: 13rem;
 }
 
-.-left-64{
-  left: -16rem;
+.top-64{
+  top: 16rem;
 }
 
-.-left-60{
-  left: -15rem;
+.top-80{
+  top: 20rem;
 }
 
-.-left-72{
-  left: -18rem;
+.top-96{
+  top: 24rem;
 }
 
-.-left-\[257px\]{
-  left: -257px;
-}
-
-.-left-\[259px\]{
-  left: -259px;
-}
-
-.-left-\[262px\]{
-  left: -262px;
-}
-
-.-left-\[265px\]{
-  left: -265px;
+.-z-10{
+  z-index: -10;
 }
 
 .z-50{
@@ -743,6 +846,10 @@ video {
 
 .mb-20{
   margin-bottom: 5rem;
+}
+
+.mb-3{
+  margin-bottom: 0.75rem;
 }
 
 .mb-32{
@@ -773,50 +880,6 @@ video {
   margin-left: 1.25rem;
 }
 
-.mr-10{
-  margin-right: 2.5rem;
-}
-
-.mr-2{
-  margin-right: 0.5rem;
-}
-
-.mt-2{
-  margin-top: 0.5rem;
-}
-
-.mt-28{
-  margin-top: 7rem;
-}
-
-.mt-5{
-  margin-top: 1.25rem;
-}
-
-.mt-8{
-  margin-top: 2rem;
-}
-
-.mt-3{
-  margin-top: 0.75rem;
-}
-
-.mb-16{
-  margin-bottom: 4rem;
-}
-
-.mb-12{
-  margin-bottom: 3rem;
-}
-
-.mr-3{
-  margin-right: 0.75rem;
-}
-
-.ml-1{
-  margin-left: 0.25rem;
-}
-
 .ml-\[6px\]{
   margin-left: 6px;
 }
@@ -825,12 +888,48 @@ video {
   margin-right: 0.25rem;
 }
 
-.mb-3{
-  margin-bottom: 0.75rem;
+.mr-10{
+  margin-right: 2.5rem;
+}
+
+.mr-2{
+  margin-right: 0.5rem;
 }
 
 .mr-5{
   margin-right: 1.25rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-12{
+  margin-top: 3rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-20{
+  margin-top: 5rem;
+}
+
+.mt-28{
+  margin-top: 7rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
 }
 
 .flex{
@@ -865,12 +964,20 @@ video {
   height: 6rem;
 }
 
+.h-32{
+  height: 8rem;
+}
+
 .h-36{
   height: 9rem;
 }
 
 .h-4{
   height: 1rem;
+}
+
+.h-40{
+  height: 10rem;
 }
 
 .h-52{
@@ -925,6 +1032,14 @@ video {
   width: 1rem;
 }
 
+.w-8\/12{
+  width: 66.666667%;
+}
+
+.w-\[10rem\]{
+  width: 10rem;
+}
+
 .w-\[20rem\]{
   width: 20rem;
 }
@@ -958,20 +1073,16 @@ video {
   width: 100%;
 }
 
-.w-\[10rem\]{
-  width: 10rem;
-}
-
-.w-8\/12{
-  width: 66.666667%;
-}
-
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -990,8 +1101,8 @@ video {
   align-items: center;
 }
 
-.justify-start{
-  justify-content: flex-start;
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{
@@ -1004,6 +1115,14 @@ video {
 
 .gap-0\.5{
   gap: 0.125rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
+}
+
+.gap-32{
+  gap: 8rem;
 }
 
 .gap-4{
@@ -1030,6 +1149,10 @@ video {
   border-width: 2px;
 }
 
+.border-b-2{
+  border-bottom-width: 2px;
+}
+
 .border-l-0{
   border-left-width: 0px;
 }
@@ -1040,10 +1163,6 @@ video {
 
 .border-t-0{
   border-top-width: 0px;
-}
-
-.border-t{
-  border-top-width: 1px;
 }
 
 .border-t-2{
@@ -1118,6 +1237,11 @@ video {
   padding-right: 0.75rem;
 }
 
+.px-32{
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1138,9 +1262,19 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .py-4{
@@ -1148,35 +1282,26 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
-}
-
-.py-\[5px\]{
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .pb-10{
   padding-bottom: 2.5rem;
 }
 
-.pb-32{
-  padding-bottom: 8rem;
-}
-
 .pb-20{
   padding-bottom: 5rem;
 }
 
-.pt-10{
-  padding-top: 2.5rem;
+.text-center{
+  text-align: center;
 }
 
 .font-firacode{
@@ -1206,6 +1331,10 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.font-medium{
+  font-weight: 500;
 }
 
 .font-semibold{
