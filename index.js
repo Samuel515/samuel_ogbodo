@@ -21,6 +21,10 @@ app.get("/projects" , (req , res) => {
     res.sendFile(__dirname + "/public/projects.html");
 });
 
+app.get("/index" , (req , res) => {
+    res.sendFile(__dirname + "/public/index.html");
+});
+
 app.get("/contacts" , (req , res) => {
     res.sendFile(__dirname + "/public/contacts.html");
 });

@@ -12,9 +12,9 @@ module.exports = {
         firacode: ["Fira Code" , "sans serif"]
       },
       content: {
-        'image-before': 'url("../assets/bg.svg")',
-        'image-after': 'url("../assets/dots.svg")',
-        'second-image-after': 'url("../assets/slant-dots.svg")',
+        'image-before': 'url("/public/assets/bg.svg")',
+        'image-after': 'url("/public/assets/dots.svg")',
+        'second-image-after': 'url("/public/assets/slant-dots.svg")',
       },
     },
   },
