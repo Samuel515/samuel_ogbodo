@@ -840,6 +840,10 @@ video {
   z-index: 50;
 }
 
+.-mb-\[150px\]{
+  margin-bottom: -150px;
+}
+
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -988,6 +992,10 @@ video {
   height: 24rem;
 }
 
+.h-\[150px\]{
+  height: 150px;
+}
+
 .h-\[1px\]{
   height: 1px;
 }
@@ -998,6 +1006,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.h-screen{
+  height: 100vh;
 }
 
 .w-0\.5{
@@ -1362,6 +1374,11 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.after\:h-\[150px\]::after{
+  content: var(--tw-content);
+  height: 150px;
 }
 
 .hover\:underline:hover{
