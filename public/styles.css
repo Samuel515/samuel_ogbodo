@@ -614,7 +614,7 @@ video {
   top: 5rem;
   left: -0.75rem;
   z-index: -10;
-  --tw-content: url("../assets/bg.svg");
+  --tw-content: url("./assets/bg.svg");
   content: var(--tw-content);
 }
 
@@ -622,7 +622,7 @@ video {
   position: absolute;
   bottom: 5rem;
   right: 1.25rem;
-  --tw-content: url("../assets/dots.svg");
+  --tw-content: url("./assets/dots.svg");
   content: var(--tw-content);
 }
 
@@ -638,7 +638,7 @@ video {
   top: 3.5rem;
   left: 0px;
   z-index: -10;
-  --tw-content: url("../assets/dots.svg");
+  --tw-content: url("./assets/dots.svg");
   content: var(--tw-content);
 }
 
@@ -646,7 +646,7 @@ video {
   position: absolute;
   bottom: 10rem;
   right: 1.25rem;
-  --tw-content: url("../assets/slant-dots.svg");
+  --tw-content: url("./assets/slant-dots.svg");
   content: var(--tw-content);
 }
 
