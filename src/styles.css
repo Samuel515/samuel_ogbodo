@@ -14,56 +14,68 @@
     @apply border-b-2 border-primary relative before:content-image-after before:absolute before:top-14 before:left-0 before:-z-10 after:content-second-image-after after:absolute after:bottom-40 after:right-5;
   }
 
-  .live{
+  .live {
     @apply py-[5px] px-5 border border-primary inline-flex justify-center items-center mt-5;
   }
 
-  .cached{
+  .cached {
     @apply py-[5px] px-5 border border-gray inline-flex justify-center items-center mt-5 text-gray;
   }
 }
 
-@keyframes rotate-cw{
-  from{
+@keyframes rotate-cw {
+  from {
     transform: rotate(0deg);
   }
-  to{
+
+  to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes rotate-acw{
-  from{
+@keyframes rotate-acw {
+  from {
     transform: rotate(360deg);
   }
-  to{
+
+  to {
     transform: rotate(0deg);
   }
 }
 
-.rotate-cw{
+.rotate-cw {
   animation: rotate-cw 10s linear infinite;
 }
 
-.rotate-acw{
+.rotate-acw {
   animation: rotate-acw 10s linear infinite;
 }
 
 @keyframes appear {
-  from{
+  from {
     opacity: 0;
     scale: 0.5;
   }
-  to{
+
+  to {
     opacity: 1;
     scale: 1;
   }
 }
 
-.appearance{
+.appearance {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.banner{
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 @tailwind base;

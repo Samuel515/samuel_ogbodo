@@ -5,50 +5,59 @@
   src: url("../fonts/FiraCode-Regular.ttf");
 } */
 
-@keyframes rotate-cw{
-  from{
+@keyframes rotate-cw {
+  from {
     transform: rotate(0deg);
   }
 
-  to{
+  to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes rotate-acw{
-  from{
+@keyframes rotate-acw {
+  from {
     transform: rotate(360deg);
   }
 
-  to{
+  to {
     transform: rotate(0deg);
   }
 }
 
-.rotate-cw{
+.rotate-cw {
   animation: rotate-cw 10s linear infinite;
 }
 
-.rotate-acw{
+.rotate-acw {
   animation: rotate-acw 10s linear infinite;
 }
 
 @keyframes appear {
-  from{
+  from {
     opacity: 0;
     scale: 0.5;
   }
 
-  to{
+  to {
     opacity: 1;
     scale: 1;
   }
 }
 
-.appearance{
+.appearance {
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.banner{
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 /* ! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com */
@@ -605,6 +614,40 @@ video {
   --tw-contain-style:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .banda{
   position: relative;
 }
@@ -680,6 +723,10 @@ video {
   color: rgb(171 178 191 / var(--tw-text-opacity));
 }
 
+.visible{
+  visibility: visible;
+}
+
 .fixed{
   position: fixed;
 }
@@ -722,6 +769,10 @@ video {
 
 .-right-56{
   right: -14rem;
+}
+
+.-right-60{
+  right: -15rem;
 }
 
 .-right-\[0\.5px\]{
@@ -840,6 +891,11 @@ video {
   z-index: 50;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .-mb-\[150px\]{
   margin-bottom: -150px;
 }
@@ -932,6 +988,10 @@ video {
   margin-top: 0.75rem;
 }
 
+.mt-5{
+  margin-top: 1.25rem;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
@@ -946,6 +1006,10 @@ video {
 
 .grid{
   display: grid;
+}
+
+.hidden{
+  display: none;
 }
 
 .h-10{
@@ -1242,6 +1306,11 @@ video {
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-24{
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .px-3{
