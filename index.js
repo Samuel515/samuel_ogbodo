@@ -32,3 +32,8 @@ app.get("/contacts" , (req , res) => {
 app.get("/about-me" , (req , res) => {
     res.sendFile(__dirname + "/public/about-me.html");
 });
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
